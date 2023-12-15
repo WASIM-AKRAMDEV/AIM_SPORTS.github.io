@@ -15,7 +15,7 @@ const swiper = new Swiper(".mySwiper", {
     768: {
       slidesPerView: 3,
     },
-  }
+  },
 });
 
 // Array of images and text
@@ -86,8 +86,6 @@ galleryData.forEach((item, index) => {
   const slide1Index = index * 2;
   const slide2Index = index * 2 + 1;
 
-
-  
   swiper.appendSlide(`
     <div class="swiper-slide">
       <div class="slide1" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="openModal(${slide1Index})">
