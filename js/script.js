@@ -86,6 +86,8 @@ galleryData.forEach((item, index) => {
   const slide1Index = index * 2;
   const slide2Index = index * 2 + 1;
 
+
+  
   swiper.appendSlide(`
     <div class="swiper-slide">
       <div class="slide1" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="openModal(${slide1Index})">
