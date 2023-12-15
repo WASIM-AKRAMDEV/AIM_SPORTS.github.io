@@ -138,3 +138,43 @@ function navigateModal(direction) {
   // Update modal content with the new index
   openModal(currentIndex);
 }
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  const modalImage = document.getElementById('modalImage');
+  const prevImageBtn = document.getElementById('prevImage');
+  const nextImageBtn = document.getElementById('nextImage');
+  const images = document.querySelectorAll('.seabird-img');
+
+  let currentIndex = 0;
+
+  // Function to update modal content based on the selected image
+  function updateModalContent(index) {
+    const imageUrl = images[index].dataset.image;
+    modalImage.src = imageUrl;
+  }
+
+  // Function to handle previous and next image buttons
+  function changeImage(direction) {
+    currentIndex += direction;
+    if (currentIndex < 0) {
+      currentIndex = images.length - 1;
+    } else if (currentIndex >= images.length) {
+      currentIndex = 0;
+    }
+    updateModalContent(currentIndex);
+  }
+
+  // Event listeners for previous and next buttons
+  prevImageBtn.addEventListener('click', () => changeImage(-1));
+  nextImageBtn.addEventListener('click', () => changeImage(1));
+
+  // Event listener for each image in the seabird section
+  images.forEach((image, index) => {
+    image.addEventListener('click', () => {
+      currentIndex = index;
+      updateModalContent(currentIndex);
+    });
+  });
+});
