@@ -56,7 +56,7 @@ const galleryData = [
       text: "Formula E Saudi 2021",
     },
     slide2: {
-      src: "/assets/766443_25f73ce805bd4a63bd3329ebd2ab9dee~mv2 (1).webp",
+      src: "./assets/766443_25f73ce805bd4a63bd3329ebd2ab9dee~mv2 (1).webp",
       text: "Formula E Saudi 2019",
     },
   },
